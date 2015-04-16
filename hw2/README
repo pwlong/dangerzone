@@ -1,0 +1,36 @@
+
+ECE 571 Spring 2015 HW2 
+Paul Long <paul@thelongs.ws>
+
+To test the modules type "make run" from the command line.
+This will run two tests:
+  --Test 1 constrains the module to 8 bits and exhaustively test it.
+  --Test 2 constrains the module to 16 bits and tests several edge cases including
+       (all variations run with and without carry in)
+     --a & b max size
+     --a & b empty
+     --a empty & b full
+     --a full & b empty
+     --a full, top half of b full & bottom half of b empty
+     --a full, top half of be empty & bottom half of b full
+     --same as above with b full and alternating halves of a empty/full
+
+Test summaries are displayed on screen which also indicate logfile names.
+
+Package diretory structure is as follows:
+
+	.
+	|-- Makefile  <------------------------ Lotsa good stuff in here
+	|-- README	<-------------------------- This file
+	|-- directed.do <---------------------- QuestaSim macro files
+	|-- exhaustive.do  <-------------------'
+	|-- hdl
+	|   |-- CarryLookAheadAdder4Bit.sv	<-- HW 1 source files
+	|   |-- nBitCarryLookAheadAdder.sv	<--'
+	|   |-- paramClock.sv	<---------------- New HW2 source files
+	|   |-- staggAdd_TB.sv  <--------------'
+	|   `-- staggeredAdder.sv  <-----------'
+	`-- stim
+	    |-- 16BitDirected.stim  <---------- Stimulus file (handmade)
+	    `-- 8BitExhaustive.stim  <--------- Stimulus file (generated with python)
+

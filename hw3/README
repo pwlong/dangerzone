@@ -1,0 +1,29 @@
+ECE 571 Spring 2015 HW3
+Paul Long <paul@thelongs.ws>
+ 
+To demo the homework, type "make p$" from the command line where
+$ = [1|2|3] which corresponds to HW part 1, 2, and 3. For example,
+to run the demo for part 2 type "make p2". 
+     
+Summaries are displayed on screen. Part 1 also produces logfiles.
+
+Diretory structure is as follows:
+  .
+  |-- Makefile  <--------------------------  magic, baby!
+  |-- README  <----------------------------- this file
+  |-- directed.do <------------------------- QuestaSim macro for part 1
+  |-- exhaustive.do	<----------------------- QuestaSim macro for part 1
+  |-- hdl
+  |   |-- hw2files <------------------------ HW2 files (used in HW3 part 1)
+  |   |   |-- CarryLookAheadAdder4Bit.sv
+  |   |   |-- nBitCarryLookAheadAdder.sv
+  |   |   |-- paramClock.sv
+  |   |   `-- staggeredAdder.sv
+  |   |-- hw3_p3.sv <----------------------- HW3 part 3 code
+  |   |-- ipv6_header_pkg.sv  <------------- HW3 part 2 code
+  |   |-- ipv6_testing.sv <----------------- HW3 part 2 testbench
+  |   `-- staggAddQueue_TB.sv <------------- HW3 part 1 testbench with queue and structs
+  |-- run.do  <----------------------------- QuestaSim macro for parts 2 & 3
+  `-- stim
+      |-- 16BitDirected.stim  <------------- HW2 files (used in HW3 part1)
+      `-- 8BitExhaustive.stim

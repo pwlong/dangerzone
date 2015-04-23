@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+`timescale 1ns/1ps 
 // paramaterizable clock module
 module pClock(output bit tick);
   

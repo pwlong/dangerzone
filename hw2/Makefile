@@ -16,7 +16,7 @@ run: sim
 	vsim -c staggAdd_TB -do directed.do
 
 clean: 
-	rm -rf work/ *.log transcript *.zip stim/*.log
+	rm -rf work/ *.log transcript *.zip stim/*.log *.vstf
 
 package: clean
 	zip Paul_L_HW2.zip * hdl/* stim/*

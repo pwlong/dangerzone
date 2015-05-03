@@ -1,0 +1,42 @@
+ECE 571 Spring 2015 HW4
+Paul Long <paul@thelongs.ws>
+
+To demo the homework, type "make run" from the command line.
+This will run the exhaustive test, dumping output to screen and
+HW4.log either of which may be inspected to verify proper operation
+of the machine.
+If you would like to interactively select the ticket price for the machine
+from a subset of valid ticket prices, type "make runP" on the command line. 
+The logfile will be named HW4_P<$PRICE>.log where <$PRICE> is the price you select.
+
+Design Assumptions:
+  There is an external controller responsible for generating valid inputs.
+  Inputs will never be asserted at the same time.
+  Inputs will only be asserted when either the Bill or Ready signals are also asserted.
+  Inputs should only be asserted for one clock cycle at a time.
+  Output signals need only be asserted for one clock cycle.
+
+Verification Assumptions:
+  Verification will be done by inspection of the output tables.
+  State traversal is displayed after each test, a missing state is not necessarily an error,
+  for example if no change is required--a valid outcome--the ReturnTen state will never be hit.
+  
+
+
+
+
+Directory structure is as follows:
+
+  .
+  |-- HW4.log <---------------  Results of running the testbench
+  |-- HW4_Diagrams.pdf  <-----  State transition diagrams, tables, test tree diagrams, etc
+  |-- Makefile  <-------------  Now with even *more* magic
+  |-- README  <---------------  This file
+  |-- hdl
+  |   |-- hw4.sv  <-----------  Module code
+  |   |-- hw4_TB.sv <---------  TB code
+  |   `-- paramClock.sv <-----  Standard clockgen module
+  |-- param.sh  <-------------  Bash script for interactive parameter selection
+  `-- run.do <----------------  QuestaSim macro
+
+

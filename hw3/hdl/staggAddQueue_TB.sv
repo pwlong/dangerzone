@@ -8,7 +8,7 @@
 *	@copyright	Paul Long, 2015
 *
 *	@brief		  Test bench for nBit (in multiples of 8) staggered pipeline adder
-              using structs and queues
+*             using structs and queues
 *
 * @parameter  FILENAME  Used as the base of the input stimulus file and also
 *                       as base of the logfile name

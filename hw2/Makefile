@@ -19,4 +19,4 @@ clean:
 	rm -rf work/ *.log transcript *.zip stim/*.log *.vstf
 
 package: clean
-	zip Paul_L_HW2.zip * hdl/* stim/*
+	zip Paul_L_HW2.zip *  hdl/* stim/*

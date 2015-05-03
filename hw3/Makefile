@@ -31,4 +31,6 @@ workspace:
 	mkdir stim
 
 package: clean
-	zip Paul_L_HW3.zip * hdl/* stim/*
+	builtin shopt -s extglob
+	zip Paul_L_HW3.zip !(*.pdf) hdl/* stim/*
+	builtin shopt -u extglob

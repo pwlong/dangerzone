@@ -1,5 +1,5 @@
 `timescale 1ns/1ps 
-// paramaterizable clock module
+// parameterizable clock module
 module pClock(output bit tick);
   
   // no dutycycle functionality yet
@@ -8,7 +8,6 @@ module pClock(output bit tick);
  
   
   initial begin
-    //tick = 0;
     forever begin
       #(PERIOD/2) tick = 0;
       #(PERIOD/2) tick = 1;

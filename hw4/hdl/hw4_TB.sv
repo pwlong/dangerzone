@@ -215,6 +215,7 @@ module TB ();
   //
   //        Delay     Number of clock cycles to wait before asserting
   //                  input (ignored if RandDelay is set, defaults to 1)
+  //
   //        RTZ       Flag indicating if input should be de-asserted
   //                  (defaults to yes)
   //                  

@@ -78,13 +78,11 @@ module hw4 #(
     ns = ps;
     unique case(ps)
          READY: if (Total) ns = BILL;
-          BILL: begin
-                  unique case (1'b1)
+          BILL: unique case (1'b1)
                     Total === TIXCOST: ns = DISPENSE;
                     Total  >  TIXCOST: ns = RETURNTEN;
                     Total  <  TIXCOST: ns = BILL;
                   endcase
-                end
      RETURNTEN: ns = DISPENSE;
       DISPENSE: ns = READY;      
     endcase
